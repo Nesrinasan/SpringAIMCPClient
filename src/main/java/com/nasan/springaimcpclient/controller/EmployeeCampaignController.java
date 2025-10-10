@@ -21,13 +21,10 @@ public class EmployeeCampaignController {
 
     @GetMapping
     public ResponseEntity<String> generate() {
-        String system = "Görevin: mevcut MCP araçlarını kullanarak employee.list aracını çağır, YALNIZCA yaşı 18 olan kullanıcılar için çıktı üret." +
-                " Şablon (aynen kullan): 'sayın (employee adı) 18. yaşınza özel 3gb hediyemizi almak için yıklayın.'" +
-                " Her uygun çalışan için sadece bir satır döndür ve başka açıklama ekleme.";
-
+        String system = "Görevin: mevcut MCP araçlarını kullanarak employee listesi içerisinden, YALNIZCA yaşı 18 olan kullanıcılar için çıktı üret." +
+                " Şablon şu şekilde: 'sayın (employee adı) 18. yaşınza özel 3gb hediyemizi almak için tıklayın.'" ;
 
         String user = "Çalışanları kontrol et ve uygun mesajları yaz.";
-
 
         var out = chat.prompt()
                 .system(system)

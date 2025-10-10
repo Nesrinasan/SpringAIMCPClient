@@ -13,9 +13,9 @@ spring:
         request-timeout: 30s
         streamable-http:
           connections:
-            remote-mcp:
+            server-mcp:
               url: http://127.0.0.1:8080
-              endpoint: /yyy
+             # endpoint: /yyy
     openai:
      api-key: ${OPENAI_API_KEY}
      chat:

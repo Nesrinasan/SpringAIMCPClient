@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class McpClientConfig {
 
-
-
     @Bean
     ChatClient chatClient(OpenAiChatModel model, ToolCallbackProvider mcpToolProvider) {
         return ChatClient.builder(model)
